@@ -14,12 +14,14 @@
         <div class="card">
           <div class="card-body">
             <h2 class="card-title">Responda o questionario</h2>
-            <form method="post" action="" class="needs-validation" novalidate>
+            <!-- questions.html -->
+            <form method="post" action="">
               {% csrf_token %}
-              {% for form in forms  %}
-                {{form.as_p}}
+              {% for form in forms %}
+                  {{ form.id_da_pergunta }}
+                  {{ form.as_p }}
               {% endfor %}
-              <button type="submit" class="btn btn-primary mt-3">Register</button>
+              <input type="submit" value="Enviar">
             </form>
           </div>
         </div>
