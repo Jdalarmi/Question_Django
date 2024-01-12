@@ -16,7 +16,9 @@
             <h2 class="card-title">Responda o questionario</h2>
             <form method="post" action="" class="needs-validation" novalidate>
               {% csrf_token %}
-              {{ form.as_p }}
+              {% for form in forms  %}
+                {{form.as_p}}
+              {% endfor %}
               <button type="submit" class="btn btn-primary mt-3">Register</button>
             </form>
           </div>
