@@ -1,0 +1,11 @@
+
+body {
+  background: linear-gradient(to right, #e0bc77, #eca829);
+  margin: 0;
+  padding: 0;
+}
+.card-body form {
+  border: 2px solid #fff; /* Adicione a cor e a largura da borda conforme necessário */
+  padding: 20px; /* Adicione preenchimento conforme necessário */
+  border-radius: 10px; /* Adicione borda arredondada conforme necessário */
+}
