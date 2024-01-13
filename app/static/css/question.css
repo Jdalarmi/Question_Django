@@ -4,17 +4,28 @@ body {
   margin: 0;
   padding: 0;
 }
+.card{
+  width: 750px;
+}
+.card-body {
+  border: 1px solid #e0d20e;
+  padding: 5 80px;
+}
 .card-body form {
   border: 5px solid #e0d20e;
   padding: 20px;
   border-radius: 20px;
+}
+.card-body h3, h4{
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 150vh;
 }
 
 .confirmation-box {
@@ -23,4 +34,9 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

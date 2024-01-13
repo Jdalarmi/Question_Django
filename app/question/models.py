@@ -19,4 +19,4 @@ class RespostaUsuario(models.Model):
     usuario = models.CharField(max_length=250, default="Usuario teste")
 
     def __str__(self):
-        return f'{self.pergunta.texto} --> {self.resposta.texto} -->{self.usuario}'
+        return f'Pergunta: {self.pergunta.texto}  Resposta: {self.resposta.texto} Usuario: {self.usuario}'

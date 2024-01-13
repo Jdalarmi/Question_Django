@@ -8,7 +8,7 @@ class TestFormEmpty(TestCase):
         self.pergunta = Pergunta.objects.create(texto='Qual é a sua cor favorita?')
         self.resposta = Resposta.objects.create(pergunta=self.pergunta, texto='Azul')
 
-    def test_form_does_not_cotain_data(self):
+    def test_form_cotain_response_data(self):
         """Teste para verificar se formulario contem os dados e é valido"""
         data = {'pergunta': self.pergunta.id, 'resposta': self.resposta.id}
         form = RespostaUsuarioForm(id_da_pergunta=self.pergunta.id, data=data)
