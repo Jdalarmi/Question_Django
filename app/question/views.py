@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import RespostaUsuarioForm
 from .models import Pergunta
+from django.contrib import messages
 
 def home_page(request):
     perguntas = Pergunta.objects.all()
@@ -11,6 +12,9 @@ def home_page(request):
             for form in forms:
                 form.save()
             return redirect('confirmation')
+        else:
+            messages.error(request, 'Por favor todos campos precisam ser preenchidos!')
+            return redirect('home-page')
     else:
         forms = [RespostaUsuarioForm(id_da_pergunta=pergunta.id, prefix=str(pergunta.id)) for pergunta in perguntas]
 
